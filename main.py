@@ -436,10 +436,10 @@ class MainWindow(QLabel):
 
         self.provinceLable = QLabel(u"输入省份")
         self.proviceLineText = QLineEdit()
-        self.proviceLineText.setFixedHeight(40)
+        self.proviceLineText.setFixedHeight(30)
         self.proviceLineText.setPlaceholderText(u"输入正确的省份名字可以提高准确率（例如：浙江、浙江省）")
         self.clearButton = QPushButton(u"清空")
-        self.clearButton.setFixedHeight(40)
+        self.clearButton.setFixedHeight(30)
 
         self.addressLabel = QLabel(u"输入地址")
 
@@ -483,7 +483,7 @@ class MainWindow(QLabel):
         mainLayout.setContentsMargins(10, 10, 10, 10)
         self.setLayout(mainLayout)
 
-        self.setStyleSheet("QLabel{ color: green; font-size: 16px;}")
+        self.setStyleSheet("QLabel{ color: green; font-size: 16px;} QLineEdit {font-size: 16px;}")
 
     def initController(self):
         self.excelHandler = ExcelHandler()
