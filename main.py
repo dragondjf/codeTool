@@ -436,8 +436,10 @@ class MainWindow(QLabel):
 
         self.provinceLable = QLabel(u"输入省份")
         self.proviceLineText = QLineEdit()
+        self.proviceLineText.setFixedHeight(40)
         self.proviceLineText.setPlaceholderText(u"输入正确的省份名字可以提高准确率（例如：浙江、浙江省）")
         self.clearButton = QPushButton(u"清空")
+        self.clearButton.setFixedHeight(40)
 
         self.addressLabel = QLabel(u"输入地址")
 
@@ -469,7 +471,7 @@ class MainWindow(QLabel):
         gridLayout.addWidget(self.codeLabel, 0, 2, Qt.AlignLeft)
         gridLayout.addWidget(self.codeEdit, 1, 2, Qt.AlignLeft)
         # gridLayout.setColumnStretch(0, 100)
-        gridLayout.setSpacing(0)
+        gridLayout.setSpacing(5)
         gridLayout.setContentsMargins(0, 0, 0, 0)
 
 
