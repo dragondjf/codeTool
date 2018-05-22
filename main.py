@@ -394,8 +394,8 @@ class DropArea(QLabel):
     def dropEvent(self, event):
         mimeData = event.mimeData()
         if mimeData.hasUrls():
-            self.setText(u"开始转换中(支持格式：.xlsx,.xlsm,.xltx,.xltm)")
-            self.changed.emit([url.path() for url in mimeData.urls()])
+            self.setText(u"开始转换中(支持格式：.xlsx)")
+            self.changed.emit([url.toLocalFile() for url in mimeData.urls()])
         else:
             self.setText("Cannot display data")
 
@@ -407,8 +407,8 @@ class DropArea(QLabel):
         event.accept()
 
     def mouseDoubleClickEvent(self, event):
-        output = "{}{}{}".format( os.path.dirname(os.path.abspath(__file__)), os.sep, "output")
-        QDesktopServices().openUrl(QUrl(output))
+        output = u"{}{}{}".format( os.path.dirname(os.path.abspath(__file__)), os.sep, "output")
+        QDesktopServices().openUrl(QUrl.fromLocalFile(output))
         event.accept()
 
     def clear(self):

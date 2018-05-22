@@ -107,3 +107,6 @@ server/log
 server/log
 .idea/
 .*.xlsx
+
+output/
+dist/
