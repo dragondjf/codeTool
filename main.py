@@ -524,7 +524,7 @@ class MainWindow(QLabel):
     def resizeEvent(self, event):
         self.areaEdit.setFixedWidth((event.size().width() / 4))
         self.codeEdit.setFixedWidth((event.size().width() / 4))
-        self.addressEdit.setFixedWidth((event.size().width() / 2) - 20)
+        self.addressEdit.setFixedWidth((event.size().width() / 2) - 30)
 
     def clearContent(self):
         self.addressEdit.clear()
