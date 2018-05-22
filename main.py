@@ -201,7 +201,7 @@ class AreaCode(object):
         results = []
         hasCity = False
 
-        if defautProvice:
+        if defautProvice and defautProvice in self.province_districts:
             districtKeys = self.province_districts[defautProvice]
         else:
             districtKeys = self.districtKeys

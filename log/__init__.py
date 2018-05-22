@@ -2,8 +2,9 @@
 
 import logging
 from logging.handlers import RotatingFileHandler
+import os
 
-fh = RotatingFileHandler("log/app.log", maxBytes=10 * 1024 * 1024, backupCount=100)
+fh = RotatingFileHandler("{}{}{}".format(os.getcwd(), os.sep, "app.log"), maxBytes=10 * 1024 * 1024, backupCount=100)
 fh.setLevel(logging.DEBUG)
 #log write in console
 ch = logging.StreamHandler()
